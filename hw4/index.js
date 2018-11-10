@@ -19,7 +19,7 @@ const books = ['The Adventures of Sherlock Holmes', 'Dracula', 'Pride and Prejud
 
 function status(statusText) {
   console.log(statusText);
-  document.getElementById('status').html = statusText;
+  document.getElementById('status').textContent = statusText;
 }
 
 function showMetadata(metadataJSON) {
@@ -47,7 +47,7 @@ function disableLoadModelButtons() {
 function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
-  score_string = "<p>Class scores: <p>";
+  score_string = "Class scores:";
   for (var x in result.score) {
     score_string += books[x] + " ->  " + result.score[x].toFixed(3) + ", "
   }
