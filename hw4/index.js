@@ -31,7 +31,7 @@ function showMetadata(metadataJSON) {
 
 function settextField(text, predict) {
   const textField = document.getElementById('text-entry');
-  textField.value = text;
+  textField.html = text;
   doPredict(predict);
 }
 
