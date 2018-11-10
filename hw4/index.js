@@ -19,7 +19,7 @@ const books = ['The Adventures of Sherlock Holmes', 'Dracula', 'Pride and Prejud
 
 function status(statusText) {
   console.log(statusText);
-  document.getElementById('status').textContent = statusText;
+  document.getElementById('status').html = statusText;
 }
 
 function showMetadata(metadataJSON) {
@@ -31,7 +31,7 @@ function showMetadata(metadataJSON) {
 
 function settextField(text, predict) {
   const textField = document.getElementById('text-entry');
-  textField.html = text;
+  textField.value = text;
   doPredict(predict);
 }
 
