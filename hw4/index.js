@@ -49,8 +49,7 @@ function doPredict(predict) {
   const result = predict(textField.value);
   score_string = "Class scores: ";
   for (var x in result.score) {
-    score_string += books[x] + " ->  " + result.score[x].toFixed(3) + "
- "
+    score_string += books[x] + " ->  " + result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
   status(
